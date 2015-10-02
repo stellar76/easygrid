@@ -1,10 +1,5 @@
 /* jodework css based on 16 wide columns. October 1st, 2015*/
 
-
-/*
-*/
-
-
 /* Lato as default font from google: https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Lato */
 
 @import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,900,900italic);
@@ -12,6 +7,12 @@
 /* Icon fonts via font-awesome: https://fortawesome.github.io/Font-Awesome */
 
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
+/* Importing transformicons style sheet to keep the index clean */
+
+@import url(../css/transformicons.css);
+
+/**/
 html, body {
   height: 100%;
 }
@@ -32,6 +33,11 @@ h1, h2, h3, h4, h5 {
 p {
   line-height: 25px;
 }
+.shim {
+  width: 100%;
+  float: left;
+  height: 85px;
+}
 .container {
   width: 100%;
   max-width: 1250px;
@@ -45,7 +51,7 @@ p {
   height: auto;
   float: left;
 }
-.col{
+.col {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -100,139 +106,153 @@ p {
   margin-left: 15px;
   margin-right: 15px;
 }
+
 /* navigation menu stuff */
+
 topnav {
-    width: 100%;
-    height: 65px;
-    float: left;
-    background:#444;
-    position: fixed;
-    z-index: 9999999;
-    top: 0px;
-    left: 0px;
-}
-topnav .logo {
-    float: left;
-    height: 65px;
-    width: 0px;
-    opacity: 0;
+  width: 100%;
+  height: 65px;
+  float: left;
+  background: #444;
+  position: fixed;
+  z-index: 9999999;
+  top: 0px;
+  left: 0px;
 }
 topnav ul {
-    width: auto;
-    height: 65px;
-    padding: 0px;
-    margin: 0px;
-    list-style: none;
-    list-style-image: none;
-    float: right;
-    -webkit-transition: all 0.1s ease;
-    -moz-transition: all 0.1s ease;
-    -o-transition: all 0.1s ease;
-    transition: all 0.1s ease;
+  width: auto;
+  height: 65px;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  list-style-image: none;
+  float: right;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
 }
 topnav ul li {
-    height: auto;
-    width: auto;
-    float: left;
+  height: auto;
+  width: auto;
+  float: left;
 }
 topnav ul li a {
-    line-height: 65px;
-    color: #ddd;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-decoration: none;
-    float: left;
-    -webkit-transition: all 0.1s ease;
-    -moz-transition: all 0.1s ease;
-    -o-transition: all 0.1s ease;
-    transition: all 0.1s ease;
-    font-weight: 700;
-    font-size: 13px;
-    height: 65px;
-    text-transform: uppercase;
+  line-height: 65px;
+  color: #ddd;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+  float: left;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  font-weight: 700;
+  font-size: 13px;
+  height: 65px;
+  text-transform: uppercase;
 }
 topnav ul li a:hover {
-    text-decoration: none;
-    color: #FFF;
-    line-height: 65px;
-    color: #777;
-    height: 65px;
-    float: left;
+  text-decoration: none;
+  color: #FFF;
+  line-height: 65px;
+  color: #777;
+  height: 65px;
+  float: left;
 }
 topnav .logo {
-    float: left;
-    height: 65px;
-    line-height: 65px;
-    width: auto;
+  float: left;
+  height: 65px;
+  line-height: 65px;
+  width: auto;
 }
 topnav .logo a {
   color: #FFF;
   font-size: 18px;
-    font-weight: 700;
+  font-weight: 700;
+  float: left;
+  height: 65px;
+  line-height: 65px!important;
 }
 topnav.down {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 9999999999;
-    background: #3f5767;
-    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
-    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
-    border: none;
-    border-top: solid 1px #3f5767;
-    border-bottom: solid 1px #3f5767;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 9999999999;
+  background: #3f5767;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+  border: none;
+  border-top: solid 1px #3f5767;
+  border-bottom: solid 1px #3f5767;
 }
 topnav.down .logo {
-    float: left;
-    height: 65px;
-    line-height: 65px;
-    color:#f9f9f9;
-    font-weight: 700;
-    width: auto;
-    opacity: 1;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+  float: left;
+  height: 65px;
+  line-height: 65px;
+  color: #f9f9f9;
+  font-weight: 700;
+  width: auto;
+  opacity: 1;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 topnav.down ul li a {
-    color: #f0f0f0;
+  color: #f0f0f0;
 }
 #navbutton {
-    width: 65px;
-    height: 65px;
-    line-height: 65px;
-    float: right;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    display: none;
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+#navbutton a {
+  width: 65px;
+  height: 65px;
+  line-height: 65px!important;
+  color: #f0f0f0;
+  text-align: center;
+  float: left;
 }
 #navbutton.open {
-    width: 65px;
-    height: 65px;
-    line-height: 65px;
-    float: right;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    background: #222;
+  width: 65px;
+  height: 65px;
+  line-height: 65px;
+  float: right;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background: #222;
 }
+
 /* form stuff */
+
 input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], textarea, select {
-  height: 35px;
-  line-height: 35px;
-  padding: 6px 10px;
+  height: 42px;
+  line-height: 42px;
+  padding: 0px 10px;
   /* The 6px vertically centers text on FF, ignored by Webkit */
   background-color: #f9f9f9;
-  border: 1px solid #DDDD;
   border-radius: 0px;
   box-shadow: none;
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
   color: #555;
   font-weight: 400;
+  font-size: 16px;
+  width: 100%;
+  outline: 0;
+  border: none;
+  border: solid 1px #eee;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 /* Removes awkward default styles on some inputs for iOS */
@@ -250,6 +270,7 @@ textarea {
 input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="text"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
   border: 1px solid #33C3F0;
   outline: 0;
+  background: #faf9f3;
 }
 label, legend {
   display: block;
@@ -303,8 +324,11 @@ ul.block li a {
 
 @media (max-width: 800px) {
   .col {
-    width: 100%!important;
+    width: calc(100% - 30px)!important;
     float: left;
+  }
+  #navbutton {
+    display: table;
   }
 }
 
