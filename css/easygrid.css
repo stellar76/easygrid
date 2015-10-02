@@ -1,4 +1,4 @@
-/* jodework css based on 16 wide columns. October 1st, 2015*/
+/* easygrid css based on 16 wide columns. October 1st, 2015*/
 
 /* Lato as default font from google: https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Lato */
 
@@ -13,6 +13,7 @@
 @import url(../css/transformicons.css);
 
 /**/
+
 html, body {
   height: 100%;
 }
@@ -37,6 +38,14 @@ p {
   width: 100%;
   float: left;
   height: 85px;
+}
+.wrap{
+  width: 100%;
+  float:left;
+  height:auto;
+  background:#FFF;
+  padding:80px 0px;
+  display: block;
 }
 .container {
   width: 100%;
@@ -106,7 +115,33 @@ p {
   margin-left: 15px;
   margin-right: 15px;
 }
+.left_adsafe{
+  width:calc(100% - 360px);
+  float: left;
+  margin-left: 15px;
+  margin-right: 15px;
 
+}
+.right_adsafe{
+  width: 300px;
+  float: left;
+  height:auto;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.right_adsafe a.ad{
+  width:100%;
+  text-align: center;
+  float: left;
+  background: #f9f9f9;
+}
+.right_adsafe a.ad img{
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* navigation menu stuff */
 
 topnav {
