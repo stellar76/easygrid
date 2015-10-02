@@ -1,8 +1,9 @@
 /* easygrid css based on 16 wide columns. October 1st, 2015*/
 
-/* Lato as default font from google: https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Lato */
 
-@import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,900,900italic);
+/* Muli as default font from google: https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Muli*/
+
+@import url(https://fonts.googleapis.com/css?family=Muli:400,300italic,300,400italic);
 
 /* Icon fonts via font-awesome: https://fortawesome.github.io/Font-Awesome */
 
@@ -20,16 +21,18 @@ html, body {
 body {
   margin: 0px;
   padding: 0px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Muli', sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #555;
   background: #DDD;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 h1, h2, h3, h4, h5 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Muli', sans-serif;
   color: #555;
-  font-weight: 900;
+  font-weight: 700;
 }
 p {
   line-height: 25px;
@@ -37,14 +40,14 @@ p {
 .shim {
   width: 100%;
   float: left;
-  height: 85px;
+  height: 65px;
 }
-.wrap{
+.wrap {
   width: 100%;
-  float:left;
-  height:auto;
-  background:#FFF;
-  padding:80px 0px;
+  float: left;
+  height: auto;
+  background: #FFF;
+  padding: 80px 0px;
   display: block;
 }
 .container {
@@ -115,33 +118,33 @@ p {
   margin-left: 15px;
   margin-right: 15px;
 }
-.left_adsafe{
-  width:calc(100% - 360px);
+.left_adsafe {
+  width: calc(100% - 360px);
   float: left;
   margin-left: 15px;
   margin-right: 15px;
-
 }
-.right_adsafe{
+.right_adsafe {
   width: 300px;
   float: left;
-  height:auto;
+  height: auto;
   margin-left: 15px;
   margin-right: 15px;
 }
-.right_adsafe a.ad{
-  width:100%;
+.right_adsafe a.ad {
+  width: 100%;
   text-align: center;
   float: left;
   background: #f9f9f9;
 }
-.right_adsafe a.ad img{
+.right_adsafe a.ad img {
   width: 100%;
   max-width: 300px;
   height: auto;
   margin-left: auto;
   margin-right: auto;
 }
+
 /* navigation menu stuff */
 
 topnav {
@@ -292,6 +295,9 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
 
 /* Removes awkward default styles on some inputs for iOS */
 
+form .col {
+  margin-bottom: 20px;
+}
 input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -349,6 +355,84 @@ ul.block li a {
   padding: 15px 20px;
   text-decoration: none;
   color: #8b0f04;
+}
+
+/* cards */
+
+
+/* buttons */
+
+.button {
+  padding: 10px 25px;
+  font-weight: 700;
+  text-align: uppercase;
+  color: #666;
+  text-align: center;
+  border: solid 1px #CCC;
+  display: block;
+  margin-bottom: 15px;
+  width: auto;
+  float: left;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  clear: both;
+  cursor: pointer;
+}
+.button.wide {
+  width: calc(100% - 50px);
+}
+.button.corners {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.button .plain {
+  background: #f0f0f0;
+}
+.button .plain:hover {
+  background: #f9f9f9;
+}
+.button.blue {
+  background: #3A539B;
+  color: #f9f9f9;
+  border: none;
+}
+.button.blue:hover {
+  background: #445ea7;
+  color: #f9f9f9;
+  border: none;
+}
+.button.red {
+  background: #CF000F;
+  color: #f9f9f9;
+  border: none;
+}
+.button.red:hover {
+  background: #e20111;
+  color: #f9f9f9;
+  border: none;
+}
+.button.green {
+  background: #1E824C;
+  color: #f9f9f9;
+  border: none;
+}
+.button.green:hover {
+  background: #239658;
+  color: #f9f9f9;
+  border: none;
+}
+.button.black {
+  background: #333;
+  color: #f9f9f9;
+  border: none;
+}
+.button.black:hover {
+  background: #3d3d3d;
+  color: #f9f9f9;
+  border: none;
 }
 
 /* over 1080p */
