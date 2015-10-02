@@ -1,17 +1,13 @@
 /* easygrid css based on 16 wide columns. October 1st, 2015*/
 
 
-/* Muli as default font from google: https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Muli*/
+/* Roboto as default font from google: https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Roboto*/
 
-@import url(https://fonts.googleapis.com/css?family=Muli:400,300italic,300,400italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,500italic,700,700italic,900,900italic);
 
 /* Icon fonts via font-awesome: https://fortawesome.github.io/Font-Awesome */
 
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
-
-/* Importing transformicons style sheet to keep the index clean */
-
-@import url(../css/transformicons.css);
 
 /**/
 
@@ -21,7 +17,7 @@ html, body {
 body {
   margin: 0px;
   padding: 0px;
-  font-family: 'Muli', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #555;
@@ -30,7 +26,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 h1, h2, h3, h4, h5 {
-  font-family: 'Muli', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #555;
   font-weight: 700;
 }
@@ -49,6 +45,10 @@ p {
   background: #FFF;
   padding: 80px 0px;
   display: block;
+  border-bottom: solid 1px #DDD;
+}
+.wrap:nth-child(even){
+  background:#f0f0f0;
 }
 .container {
   width: 100%;
@@ -113,6 +113,13 @@ p {
 }
 .sixteen {
   width: calc(100% - 30px);
+  float: left;
+  height: auto;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.triples {
+  width: calc(33.33333% - 30px);
   float: left;
   height: auto;
   margin-left: 15px;
@@ -359,6 +366,61 @@ ul.block li a {
 
 /* cards */
 
+.card {
+  width: 100%;
+  height: auto;
+  float: left;
+  margin-bottom: 20px;
+  position: relative;
+  border: solid 1px #DDD;
+  background: #222;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+}
+.card a.header_img, .card a.header_img img {
+  width: 100%;
+  height: auto;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0.9 !important;
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  -o-transform: scale(1);
+}
+.card a.header_img:hover img {
+  opacity: 1 !important;
+  transform: scale(1.02);
+  -ms-transform: scale(1.08);
+  -moz-transform: scale(1.08);
+  -webkit-transform: scale(1.08);
+  -o-transform: scale(1.08);
+}
+.card a.header_img .title {
+  position: absolute;
+  width: calc(100% - 40px);
+  padding: 20px;
+  bottom: 0px;
+  left: 0px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #FFF;
+  text-shadow: 1px 1px 1px #222;
+  z-index: 999;
+}
+.card .summary {
+  width: calc(100% - 40px);
+  padding: 20px;
+  float: left;
+  background: #FFF;
+}
 
 /* buttons */
 
